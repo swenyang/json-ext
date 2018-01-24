@@ -1,5 +1,5 @@
 {
-  "name": "json-ext",
+  "name": "json-enhance",
   "version": "1.0.0",
   "description": "Extend JSON.stringify() & JSON.parse() to handle more values SAFELY",
   "main": "index.js",

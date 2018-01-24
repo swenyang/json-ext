@@ -1,4 +1,4 @@
-# json-ext
+# json-enhance
 
 Extend JSON.stringify() & JSON.parse() to handle more values:
 
@@ -21,11 +21,11 @@ And both `stringify()` and `parse()` are safe:
 ## How to use
 
 ```bash
-npm i --save json-ext
+npm i --save json-enhance
 ```
 
 ```js
-import { stringify, parse } from 'json-ext'
+import { stringify, parse } from 'json-enhance'
 
 const obj = {
     a: 1,

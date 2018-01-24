@@ -18,7 +18,7 @@ expect.extend({
     },
 })
 
-describe('json-ext.js', () => {
+describe('json-enhance.js', () => {
     test('primitives', () => {
         expect(parse(stringify(null))).toBe(null)
         expect(parse(stringify(undefined))).toBe(undefined)
