@@ -28,17 +28,24 @@ describe('json-enhance.js', () => {
         expect(parse(stringify(''))).toBe('')
         expect(parse(stringify('123'))).toBe('123')
     })
-    // test('error', () => {
-    //     expect(parse(stringify({
-    //         mX: 1,
-    //         get x() {
-    //             return this.mX
-    //         },
-    //         set x(v) {
-    //             this.mX = v
-    //         }
-    //     }))).toBe(null)
-    // })
+    test('error', () => {
+        expect(parse(stringify({
+            mX: 1,
+            get x() {
+                return this.mX
+            },
+            set x(v) {
+                this.mX = v
+            }
+        }))).toBe(null)
+        expect(parse('{}')).toBe(null)
+        expect(parse(JSON.stringify({
+            entries: [
+                { path: [ 'x' ], type: 'test' },
+            ],
+            recoverableData: { x: 1 },
+        }))).toEqual({ x: 1 })
+    })
     test('array without speical values', () => {
         const d1 = [1, 2, 3]
         expect(parse(stringify(d1))).toEqual(d1)

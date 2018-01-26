@@ -64,13 +64,7 @@ function traverseAndMark(obj, entries, path) {
 }
 
 export function stringify(obj) {
-    try {
-        const entries = []
-        const recoverableData = traverseAndMark(obj, entries, [], 0)
-        return JSON.stringify({ entries, recoverableData })
-    }
-    catch (e) {
-        console.error(e)
-        return ''
-    }
+    const entries = []
+    const recoverableData = traverseAndMark(obj, entries, [], 0)
+    return JSON.stringify({ entries, recoverableData })
 }
