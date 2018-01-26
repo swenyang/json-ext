@@ -78,7 +78,7 @@ describe('json-enhance.js', () => {
             /\d{11}$/g,
         ]
         const str1 = stringify(d1)
-        console.log(str1)
+        // console.log(str1)
         expect(parse(str1)).toDeepEqual(d1)
     })
     test('object without special values', () => {
