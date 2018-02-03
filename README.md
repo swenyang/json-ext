@@ -54,6 +54,10 @@ const str = stringify(obj)
 parse(str) // equals obj
 ```
 
+## Why
+
+Mainly used for state recoverage of web app. See [my article here](https://swenyang.gitbooks.io/yapn/content/json-enhance/).
+
 ## Pitfalls
 
 ### `toString()`
